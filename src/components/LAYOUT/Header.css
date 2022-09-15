@@ -46,27 +46,8 @@
     text-align: center;
     background-color:rgb(182, 60, 12); 
 }
-.hdr_topBack,.hdrsumry{
-    position: absolute;
-}   
-.hdr_topBack{
-    border: 1px solid black;
-    width: 100vw;
-    height: 60vh;
-    background-color: rgb(88, 86, 86);
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
-}
-.hrd_img{
-    background: url('../Resources/meals.jpg')no-repeat;
-    background-size: cover;
-    height: 50vh;
-    width: 100vw;
-    clip-path: polygon(0 0, 100% 0, 100% 71%, 0% 100%);
-}
-.sumryholder{
-    display: flex;
-    justify-content: center;
-}
-.hdrsumry{
-    top: 35vh;
+.hdrnav{
+    position: sticky;
+    top: 0px;
+    z-index: 999;
 }

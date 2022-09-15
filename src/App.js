@@ -1,13 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './components/LAYOUT/Header';
 import Summary from './components/LAYOUT/Summary';
+import Availemeals from './components/MEALS/Availemeals';
 
 function App() {
   return (
-   <>
-   <Header/>
-   </>
+   
+  <div className='app_content'>
+  <Header/>
+ <Summary/>
+<Availemeals/>
+  </div>
+   
+  
   );
 }
 

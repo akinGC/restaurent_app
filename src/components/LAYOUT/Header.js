@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import './Header.css'
 import { Fragment } from 'react'
-import Summary from './Summary'
+
 
 const Header=()=>{
     return(
@@ -19,14 +19,7 @@ const Header=()=>{
             </div>
         </div>
        </nav>
-       <div className='sumryholder'>
-       <div className='hdr_topBack'>
-            <div className='hrd_img' ></div>
-        </div>
-        <div className='hdrsumry'>
-            <Summary/>
-        </div>
-       </div>
+      
        </Fragment>
     )
 }
