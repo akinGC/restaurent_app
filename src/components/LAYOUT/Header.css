@@ -1,0 +1,72 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.hdrnav{
+    background-color:rgb(110, 33, 3);
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hdrcovr{
+
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+}
+.hdrtitle{
+    color: white;
+    font-weight: 700;
+    font-size: xx-large;
+}
+.hdrcrt{
+   
+    display: flex;
+ 
+    color: white;
+    border-radius: 20px;
+    width: 22vw;
+    background-color:rgb(68, 22, 4); 
+    align-items: center;
+    justify-content: center;
+}
+.hdrcrthold{
+
+    display: flex;
+    gap: 15px;
+}
+.hdrtxt{
+    font-weight: 700;
+    font-size: large;
+}
+.hdrnum{
+    min-width: 3vw;
+    border-radius: 12px;
+    text-align: center;
+    background-color:rgb(182, 60, 12); 
+}
+.hdr_topBack,.hdrsumry{
+    position: absolute;
+}   
+.hdr_topBack{
+    border: 1px solid black;
+    width: 100vw;
+    height: 60vh;
+    background-color: rgb(88, 86, 86);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+.hrd_img{
+    background: url('../Resources/meals.jpg')no-repeat;
+    background-size: cover;
+    height: 50vh;
+    width: 100vw;
+    clip-path: polygon(0 0, 100% 0, 100% 71%, 0% 100%);
+}
+.sumryholder{
+    display: flex;
+    justify-content: center;
+}
+.hdrsumry{
+    top: 35vh;
+}

@@ -1,0 +1,16 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.sumrycover{
+    background-color: rgb(63, 62, 62);
+    color: white;
+    width: 50vw;
+    height: 30vh;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+ text-align: center;
+ justify-content: space-evenly;
+
+}
