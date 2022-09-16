@@ -4,9 +4,9 @@ const Summary = () => {
     return (
 
         <div className='sumryholder'>
-            <div className='hdr_topBack'>
-                <div className='hrd_img' ></div>
-            </div>
+           
+                <div className='hrd_img'></div>
+           
 
             <div className='sumrycover hdrsumry'>
                 <h1 className='sumryheadr'>Delicious Food,Delivered To You</h1>

@@ -9,7 +9,23 @@ import Context from './components/CART/Context';
 
 function App() {
 const [updated,setUpdated]=useState([])
+const [reset,setReset]=useState(false)
+function setngval(e){
+  setReset(e)
+  console.log(reset)
+}
 
+
+function reseter(e){
+ 
+  setUpdated([])
+ 
+}
+function scndUpdte(e){
+console.log(e)
+setUpdated(e)
+
+}
   const [mdisp, setMdisp] = useState(false)
 function arrayUpdate(e){
   setUpdated([...updated,e])
@@ -27,22 +43,20 @@ function arrayUpdate(e){
 
   }
 
-
   const result = Object.values(updated.reduce((r, o) => {
     r[o.name] = (r[o.name] && r[o.name].qty > o.qty) ? r[o.name] : o
   
     return r
   }, {}))
 
-
-
-
-
-
   return (
 <Context.Provider value={{
   arrayUpdates:arrayUpdate,
-  array:result
+  array:result,
+  scndUpdte:scndUpdte,
+  reseter:reseter,
+  reset:reset,
+  setngval:setngval
 
 }}>
     <div className='overlay'>
@@ -58,12 +72,8 @@ function arrayUpdate(e){
      <Modal updatem={updatem} updated={updated}/>
         </div>,document.getElementById('props_overlay')))
       }
-
-
     </div>
-
     </Context.Provider>
-
   );
 }
 

@@ -16,12 +16,14 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid rgb(197, 191, 191);
+    padding-top: 2vh;
+    padding-bottom: 2vh;
 }
 .moditm_total_txt{
     font-weight: 700;
 }
 .mod_btn_placer{
-
+    padding-top: 2vh;
     float: right;
     display: flex;
     justify-content: space-evenly;
@@ -44,5 +46,65 @@
     transform: scale(1.1);
 }
 .moditm_list{
+    padding-top: 3vh;
+    padding-bottom: 2vh;
     border-bottom: 1px solid rgb(194, 187, 187);
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1vw;
+    padding-left: 1vw;
+}
+.moditm_list_txt{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+.moditm_list_txt_name{
+    font-weight: 700;
+    font-size: large;
+}
+.moditm_list_txt_num{
+    display: flex;
+    gap: 2vw;
+}
+.moditm_list_txt_price{
+    color: red;
+}
+.moditm_list_txt_qty{
+    border: 1px solid rgb(161, 156, 156);
+    border-radius: 5px;
+    padding: 0 0.5vw 0 0.5vw;
+}
+.moditm_list_btns{
+    display: flex;
+    gap: 2vw;
+}
+.moditm_list_btn{
+    height: 50%;
+   width: 2vw;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgb(110, 33, 3);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.moditm_list_btn:active{
+    transform: scale(1.1);
+}
+.sub{
+    background-color: white;
+    color: rgb(110, 33, 3);
+    border: 1px solid rgb(110, 33, 3);
+}
+.no_itm_msg{
+    text-align: center;
+    color: red;
+    font-weight: 700;
+    padding-top: 2vh;
+    display: none;
 }

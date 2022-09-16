@@ -8,6 +8,7 @@ import Context from '../CART/Context'
 const Header = (props) => {
     const auth = useContext(Context)
     let sum =0;
+  
      auth.array.forEach((ele)=>{
         sum=sum+ele.qty
     })

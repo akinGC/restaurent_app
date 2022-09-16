@@ -16,19 +16,17 @@
     position: absolute;
 }
 
-.hdr_topBack {
-    height: 60vh;
-    background-color: rgb(88, 86, 86);
-    /* box-shadow: rgba(241, 239, 239, 0.2) 0px 60px 40px -7px; */
-    width: 98.5vw;
-}
+
 
 .hrd_img {
     background: url('../Resources/meals.jpg')no-repeat;
     background-size: cover;
-    height: 50vh;
-
+    height: 60vh;
+   
+  
+    width:100vw;
     clip-path: polygon(0 0, 100% 0, 100% 71%, 0% 100%);
+    padding: 0%;
 }
 
 .sumrycover {

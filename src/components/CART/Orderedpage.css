@@ -1,0 +1,35 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.ord{
+    background-color: white;
+    height: 40vh;
+    width: 35vw;
+    border-radius: 12px;
+}
+.ordcover{
+    height: 33vh;
+    width: 35vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: green;
+    font-size: x-large;
+    letter-spacing: 0.1vw;
+}
+.ordcls{
+    float: right;
+    margin-right: 3vw;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: rgb(110, 33, 3);
+    padding: 0.5vw;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.ordcls:active{
+    transform: scale(1.1);
+}
