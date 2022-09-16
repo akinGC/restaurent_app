@@ -1,0 +1,48 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.modcover{
+   border-radius: 12px;
+    background-color: white;
+    width: 40vw;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 12px;
+}
+.moditm_total{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(197, 191, 191);
+}
+.moditm_total_txt{
+    font-weight: 700;
+}
+.mod_btn_placer{
+
+    float: right;
+    display: flex;
+    justify-content: space-evenly;
+    width: 20vw;
+}
+
+.modbtn{
+    background-color: rgb(110, 33, 3);
+    border-radius: 12px;
+    color: white;
+   width: 7vw;
+   text-align: center;
+   height: 4vh;
+   cursor: pointer;
+   user-select: none;
+   border: none;
+   outline: none;
+}
+.modbtn:active{
+    transform: scale(1.1);
+}
+.moditm_list{
+    border-bottom: 1px solid rgb(194, 187, 187);
+}

@@ -1,3 +1,22 @@
+
+.app_content,.modal_content{
+    position: absolute;
+}
+.modal_content{
+    z-index: 999;
+    width: 100vw;
+   height:100vh;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: saturate(180%) blur(1px);
+  overflow: hidden;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ 
+}
 .app_content{
     background-color:rgb(88, 86, 86);
+   
+    overflow: hidden;
 }
