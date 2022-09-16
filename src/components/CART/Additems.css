@@ -1,0 +1,40 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.Adcover{
+    position: relative;
+    right:5vw;
+   display: flex;
+   flex-direction: column;
+   gap: 2vh;
+   align-items: center;
+   padding: 1vw;
+}
+.Adnumcvr{
+    display: flex;
+    gap: 2vw;
+}
+.adnumtxt{
+    font-weight: 700;
+}
+.adamt{
+    border: 1px solid rgb(216, 206, 206);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.adbtn{
+    background-color: rgb(110, 33, 3);
+    border-radius: 12px;
+    color: white;
+   width: 7vw;
+   text-align: center;
+   height: 4vh;
+   cursor: pointer;
+   user-select: none;
+   border: none;
+   outline: none;
+}
+.adbtn:active{
+    transform: scale(1.1);
+}

@@ -5,14 +5,14 @@ import Availemeals from './components/MEALS/Availemeals';
 
 function App() {
   return (
-   
-  <div className='app_content'>
-  <Header/>
- <Summary/>
-<Availemeals/>
-  </div>
-   
-  
+
+    <div className='app_content'>
+      <Header />
+      <Summary />
+      <Availemeals />
+    </div>
+
+
   );
 }
 
