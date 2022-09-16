@@ -1,5 +1,6 @@
 import Additems from '../CART/Additems'
 import './Mealslist.css'
+
 const Mealslist = (props) => {
 
     return (
@@ -13,7 +14,7 @@ const Mealslist = (props) => {
                                 <div className='list_item_desc'>{itm.desc}</div>
                                 <div className='list_item_amt'>${itm.amt}</div>
                             </div>
-                            <div className='list_item_select'><Additems/></div>
+                            <div className='list_item_select'><Additems  itm={itm}/></div>
                         </li>
                     ))
                 }

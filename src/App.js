@@ -1,13 +1,20 @@
-import { Fragment, useState } from 'react';
+import {useState } from 'react';
 import './App.css';
 import Modal from './components/CART/Modal';
 import Header from './components/LAYOUT/Header';
 import Summary from './components/LAYOUT/Summary';
 import Availemeals from './components/MEALS/Availemeals';
-import dom from'react-dom'
+import dom from'react-dom';
+import Context from './components/CART/Context';
 
 function App() {
+const [updated,setUpdated]=useState([])
+
   const [mdisp, setMdisp] = useState(false)
+function arrayUpdate(e){
+  setUpdated([...updated,e])
+}
+
   function updatem(e) {
     let ele = document.getElementsByClassName('app_content')[0]
     setMdisp(e)
@@ -20,8 +27,24 @@ function App() {
 
   }
 
-  return (
 
+  const result = Object.values(updated.reduce((r, o) => {
+    r[o.name] = (r[o.name] && r[o.name].qty > o.qty) ? r[o.name] : o
+  
+    return r
+  }, {}))
+
+
+
+
+
+
+  return (
+<Context.Provider value={{
+  arrayUpdates:arrayUpdate,
+  array:result
+
+}}>
     <div className='overlay'>
       <div className='app_content'>
         <Header updatem={updatem} />
@@ -32,13 +55,14 @@ function App() {
 
       {
         (mdisp && dom.createPortal(<div className='modal_content'>
-          <Modal updatem={updatem}/>
+     <Modal updatem={updatem} updated={updated}/>
         </div>,document.getElementById('props_overlay')))
       }
 
 
     </div>
 
+    </Context.Provider>
 
   );
 }
