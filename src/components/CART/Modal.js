@@ -1,30 +1,36 @@
-
 import { useState } from 'react'
 import './Modal.css'
 import Context from '../CART/Context'
 import { useContext } from 'react'
 import Orderedpage from './Orderedpage'
+
 function Modal(props) {
+
     const [smod, setSmod] = useState(true)
     const auth = useContext(Context);
     let localArry = auth.array
     let amt = 0
+
     for (let i = 0; i < auth.array.length; i++) {
         amt = (amt + auth.array[i].amt) * auth.array[i].qty
 
     }
+
     function update() {
         props.updatem(false)
     }
+
     function setmodfunc() {
         let ele = document.getElementsByClassName('no_itm_msg')[0]
         if (localArry.length != 0) setSmod(false)
         else ele.style.display = 'block'
     }
+
     function addcontent(e) {
         for (let i = 0; i < localArry.length; i++) {
             if (localArry[i].name == e.target.name) {
                 let newamt = localArry[i].amt / localArry[i].qty
+                
                 let newobj = {
                     name: localArry[i].name,
                     qty: localArry[i].qty + 1,
@@ -34,25 +40,32 @@ function Modal(props) {
                 localArry[i] = newobj
             }
         }
-
         auth.scndUpdte(localArry)
     }
+    
     function delcontent(e) {
         for (let i = 0; i < localArry.length; i++) {
             if (localArry[i].name == e.target.name) {
-                let newamt = localArry[i].amt / localArry[i].qty
-                let newobj = {
-                    name: localArry[i].name,
-                    qty: localArry[i].qty - 1,
-                    desc: localArry[i].desc,
-                    amt: (newamt * (localArry[i].qty - 1))
+               
+                    if(localArry[i].qty>1){
+                    let newamt = localArry[i].amt / localArry[i].qty
+                    let newobj = {
+                        name: localArry[i].name,
+                        qty: localArry[i].qty - 1,
+                        desc: localArry[i].desc,
+                        amt: (newamt * (localArry[i].qty - 1))
+                    }
+                    localArry[i] = newobj
                 }
-                localArry[i] = newobj
+                else{
+                    localArry.splice(i,1)
+                   
+                } 
             }
         }
         auth.scndUpdte(localArry)
-
     }
+
     return (
         (smod) ? <div className='modcover'>
             <ul className='moditm_name'>
@@ -73,8 +86,6 @@ function Modal(props) {
                         </li>
                     ))
                 }
-
-
             </ul>
             <div className='moditm_total'>
                 <span className='moditm_total_txt'>Total Amount</span>

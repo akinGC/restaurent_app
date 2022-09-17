@@ -1,7 +1,6 @@
 * {
     margin: 0%;
     padding: 0%;
-
 }
 
 .listplacer {
@@ -16,7 +15,6 @@
     border-radius: 12px;
     width: 60vw;
     padding: 1vw;
-
 }
 
 .list_item {
@@ -46,5 +44,4 @@
 .list_item_amt {
     color: red;
     font-weight: 700;
-
 }

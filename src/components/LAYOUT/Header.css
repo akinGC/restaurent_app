@@ -12,7 +12,6 @@
 }
 
 .hdrcovr {
-
     width: 80vw;
     display: flex;
     justify-content: space-between;
@@ -25,9 +24,7 @@
 }
 
 .hdrcrt {
-
     display: flex;
-
     color: white;
     border-radius: 20px;
     width: 22vw;
@@ -37,7 +34,6 @@
 }
 
 .hdrcrthold {
-
     display: flex;
     gap: 15px;
 }

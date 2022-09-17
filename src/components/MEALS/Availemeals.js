@@ -1,6 +1,8 @@
 import './Mealslist.css'
 import Mealslist from './Mealslist'
+
 const Availemeals = () => {
+    
     let mealarry = [
         {
             name: 'Sushi',
@@ -23,6 +25,7 @@ const Availemeals = () => {
             amt: 5.50
         }
     ]
+
     return (
         <>
             <Mealslist list={mealarry} />

@@ -5,25 +5,19 @@
 
 .sumryholder {
     height: 60vh;
-
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.hdr_topBack,
-.hdrsumry {
+.hdr_topBack,.hdrsumry {
     position: absolute;
 }
-
-
 
 .hrd_img {
     background: url('../Resources/meals.jpg')no-repeat;
     background-size: cover;
     height: 60vh;
-   
-  
     width:100vw;
     clip-path: polygon(0 0, 100% 0, 100% 71%, 0% 100%);
     padding: 0%;
@@ -40,5 +34,4 @@
     text-align: center;
     justify-content: space-evenly;
     top: 35vh;
-
 }

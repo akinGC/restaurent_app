@@ -3,8 +3,8 @@ import './Additems.css'
 import Context from '../CART/Context'
 import { useContext } from 'react'
 const Additems = (props) => {
+
     const auth = useContext(Context)
-   
     const [num, setNum] = useState(0)
 
     function update() {
@@ -17,9 +17,11 @@ const Additems = (props) => {
         amt:props.itm.amt
        }) 
     }
+
     useEffect(()=>{
         auth.reset?setNum(0):setNum(num)
     },[auth.reset])
+    
     return (
         <div className='Adcover'>
             <div className='Adnumcvr'>

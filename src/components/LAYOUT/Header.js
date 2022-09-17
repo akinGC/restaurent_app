@@ -4,19 +4,21 @@ import './Header.css'
 import { Fragment,useContext } from 'react'
 import Context from '../CART/Context'
 
-
 const Header = (props) => {
+
     const auth = useContext(Context)
     let sum =0;
   
      auth.array.forEach((ele)=>{
         sum=sum+ele.qty
     })
+
     function setrue(){
         props.updatem(true)
     }
+
     return (
-        <Fragment>
+       
             <nav className='hdrnav'>
                 <div className='hdrcovr'>
                     <span className='hdrtitle'>ReactMeals</span>
@@ -30,7 +32,7 @@ const Header = (props) => {
                 </div>
             </nav>
 
-        </Fragment>
+     
     )
 }
 export default Header
